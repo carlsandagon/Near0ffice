@@ -1,0 +1,174 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #111;
+  background: #f5f5f4;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Header */
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b6b6b;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+.form,
+.results {
+  background: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Form fields */
+.field {
+  margin-bottom: 1rem;
+}
+
+.field label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b6b6b;
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 8px 12px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background: #f9f9f8;
+  color: #111;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input::placeholder {
+  color: #aaa;
+}
+
+.field input:focus {
+  border-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Button */
+button#calculate-btn {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+button#calculate-btn:hover {
+  opacity: 0.85;
+}
+
+button#calculate-btn:active {
+  opacity: 0.75;
+}
+
+/* Results */
+.results h2 {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+/* Metric cards */
+.card {
+  background: #f9f9f8;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 14px 12px;
+}
+
+.card .icon {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.card .label {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.card .value {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* Verdict — full width row */
+.verdict-card {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.verdict-card .icon {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.verdict-card .label {
+  margin-bottom: 2px;
+}
+
+.verdict-card .value {
+  font-size: 14px;
+}
+
+/* Hidden state */
+.hidden {
+  display: none;
+}
